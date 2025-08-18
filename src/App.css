@@ -1,13 +1,34 @@
-*{margin: 0px; padding: 0px;}
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
-body{
-  font-family: 'Lato', sans-serif;
+* {
+  margin: 0px;
+  padding: 0px;
+}
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+body {
+  font-family: "Lato", sans-serif;
   font-size: 14px;
 }
 
-.bg-purple{
+.bg-purple {
   background-color: #6f42c1;
 }
-.headerWrapper .top-strip {padding: 8px 0px;}
-.headerWrapper .top-strip p{color: #fff;
-font-size: 10px; font-weight: 600;}
+.headerWrapper .top-strip {
+  padding: 8px 0px;
+}
+.headerWrapper .top-strip p {
+  color: #fff;
+  font-size: 12px;
+  font-weight: 600;
+}
+.headerWrapper .header {
+  width: 100%;
+  height: auto;
+  padding: 15px 0px;
+}
+.logoWrapper img{
+  width: 100%;
+}
+.headerWrapper .header .part2 .countryDropdown {
+width: 150px;
+height: 80px;
+min-width: 150px;
+}
