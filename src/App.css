@@ -11,6 +11,7 @@ body {
 .bg-purple {
   background-color: #6f42c1;
 }
+/* HEADER CSS */
 .headerWrapper .top-strip {
   padding: 8px 0px;
 }
@@ -28,11 +29,11 @@ body {
   width: 100%;
 }
 .headerWrapper .header .part2 .countryDropdown {
-  width: 150px;
-  height: 60px;
-  min-width: 150px;
+  width: 170px;
+  height: 50px;
+  min-width: 170px;
   color: #000 !important;
-  padding: 10px 10px;
+  padding: 10px 15px;
 }
 .headerWrapper .header .part2 .countryDropdown {
   text-align: left;
@@ -56,20 +57,27 @@ body {
 .headerWrapper .header .part2 .countryDropdown span.ml-auto svg{
   opacity: 0.7;
 }
+
+/* HEADER SEARCH CSS */
 header .headerSearch{
+  border-radius: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
   width: 60%;
-  height: 60px;
+  height: 50px;
   background: #dedcdc;
   padding: 10px;
   position: relative;
 }
+header .headerSearch input::-webkit-input-placeholder{
+  color: rgba(0, 0, 0, 0.6);
+}
 header .headerSearch input {
   background: transparent !important;
   outline: none !important;
-  font-size: 14px ;
+  font-size: 15px ;
   color: #000;
   width: 100%;
-  height: 40px;
+  height: 30px;
   border: 0px !important;
   padding: 0px 20px !important;
 } 
@@ -78,8 +86,48 @@ header .headerSearch button{
   top : 10px ;
   right: 15px;
   z-index: 100;
-  min-width: 40px !important;
-  height: 40px !important;
-  width: 40px !important;
+  min-width: 30px !important;
+  height: 30px !important;
+  width: 30px !important;
   border-radius: 50% !important;
+  color: black;
+}
+header .headerSearch button svg{
+  font-size: 30px;
+}
+header .part3 .circle{
+  align-items: center;
+  justify-content: center;
+  min-width: 50px !important;
+  height: 50px !important;
+  width: 50px !important;
+  border-radius: 50% !important;
+  bottom: 1px solid rgba(0, 0, 0, 0.1);
+  color: black;
+}
+header .part3 .circle svg{
+  font-size: 30px;
+}
+
+/* CART TAB CSS */
+.cartTab .price{
+  font-size: 18px;
+  color: rgba(0, 0, 0, 0.8);
+  font-weight: 600;
+}
+.cartTab button{
+  background-color: #fff1ee !important;
+}
+.cartTab button svg{
+  color: #ff6b6b;
+}
+.cartTab .cartCount{
+  position : absolute;
+  top :0px;
+  right: -5px;
+  background-color: #ff6b6b;
+  border-radius: 50%;
+  color: #fff;
+  width: 20px;
+  height: 20px;
 }

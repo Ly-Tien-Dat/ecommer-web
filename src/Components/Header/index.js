@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 import CountryDropdown from "../CountryDopdown";
 import Button from "@mui/material/Button";
 import { IoSearchSharp } from "react-icons/io5";
+import { FaRegCircleUser } from "react-icons/fa6";
+import { IoBagCheckOutline } from "react-icons/io5";
 
 const Header = () => {
   return (
@@ -27,13 +29,28 @@ const Header = () => {
                 <CountryDropdown />
 
                 {/* Header search start here ==> */}
-                <div className="headerSearch ml-4 mr-4">
-                  <input type="text" />
+                <div className="headerSearch ms-3 me-3">
+                  <input type="text" placeholder="Search for products ..." />
                   <Button>
                     <IoSearchSharp />
                   </Button>
                 </div>
                 {/* <== Header search start here  */}
+
+                <div className="part3 d-flex align-items-center ms-auto">
+                  <Button className="circle">
+                    <FaRegCircleUser />
+                  </Button>
+                  <div className="ms-auto cartTab d-flex align-items-center">
+                    <span className="price">$3.29</span>
+                    <div className="position-relative ms-2">
+                      <Button className="circle">
+                        <IoBagCheckOutline />
+                      </Button>
+                      <span className="cartCount d-flex align-items-center justify-content-center">2</span>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
