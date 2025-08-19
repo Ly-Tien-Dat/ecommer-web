@@ -2,9 +2,10 @@ import Logo from "../../assets/images/pngegg.png";
 import { Link } from "react-router-dom";
 import CountryDropdown from "../CountryDopdown";
 import Button from "@mui/material/Button";
-import { IoSearchSharp } from "react-icons/io5";
+import SearchBox from "./SearchBox";
 import { FaRegCircleUser } from "react-icons/fa6";
 import { IoBagCheckOutline } from "react-icons/io5";
+import Navigation from "./Navigation";
 
 const Header = () => {
   return (
@@ -27,16 +28,7 @@ const Header = () => {
               </div>
               <div className="col-sm-10 d-flex align-items-center part2">
                 <CountryDropdown />
-
-                {/* Header search start here ==> */}
-                <div className="headerSearch ms-3 me-3">
-                  <input type="text" placeholder="Search for products ..." />
-                  <Button>
-                    <IoSearchSharp />
-                  </Button>
-                </div>
-                {/* <== Header search start here  */}
-
+                <SearchBox />
                 <div className="part3 d-flex align-items-center ms-auto">
                   <Button className="circle">
                     <FaRegCircleUser />
@@ -47,7 +39,9 @@ const Header = () => {
                       <Button className="circle">
                         <IoBagCheckOutline />
                       </Button>
-                      <span className="cartCount d-flex align-items-center justify-content-center">2</span>
+                      <span className="cartCount d-flex align-items-center justify-content-center">
+                        2
+                      </span>
                     </div>
                   </div>
                 </div>
@@ -55,6 +49,7 @@ const Header = () => {
             </div>
           </div>
         </header>
+        <Navigation />
       </div>
     </>
   );

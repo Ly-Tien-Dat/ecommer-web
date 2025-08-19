@@ -7,6 +7,11 @@ body {
   font-family: "Lato", sans-serif;
   font-size: 14px;
 }
+@media (min-width: 1300px) {
+    .container, .container-md, .container-sm {
+        max-width: 1200px;
+    }
+}
 
 .bg-purple {
   background-color: #6f42c1;
@@ -130,4 +135,49 @@ header .part3 .circle svg{
   color: #fff;
   width: 20px;
   height: 20px;
+}
+
+/* CART DROPDOWN CSS */
+nav .allCartTab {
+  background: #2bbef9;
+  padding: 10px 15px !important;
+  border-radius: 30px;
+}
+nav .allCartTab *{
+  color : #fff ;
+}
+nav .allCartTab :hover{
+  background-color: #2bbef9;
+}
+nav .allCartTab .text {
+  font-weight: 600;
+}
+nav .allCartTab svg{
+  font-size: 20px !important;
+}
+nav .allCartTab .icon1 svg{
+  font-size: 25px !important;
+}
+nav .allCartTab .icon2 svg{
+  font-size: 20px !important;
+}
+
+nav .navPart2 ul{
+  margin-bottom: 0px;
+}
+nav .navPart2 ul li a{
+  font-size: 16px;
+  font-weight: 500;
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.7);
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  padding: 8px 20px;
+  transition: all 0.3s ease-in-out;
+  border-radius: 30px;
+}
+nav .navPart2 ul li a:hover{
+  background: #f0faff;
+  color: #2bbef9;
 }
