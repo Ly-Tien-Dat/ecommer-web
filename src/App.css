@@ -8,9 +8,22 @@ body {
   font-size: 14px;
 }
 @media (min-width: 1300px) {
-    .container, .container-md, .container-sm {
-        max-width: 1200px;
-    }
+  .container,
+  .container-md,
+  .container-sm {
+    max-width: 1200px;
+  }
+}
+::-webkit-scrollbar{
+  width: 8px !important;
+  height: 8px !important;
+}
+::-webkit-scrollbar-thumb {
+  background: #ccc !important;
+  border-radius: 10px !important;
+}
+::-webkit-scrollbar-track{
+  background: transparent !important;
 }
 
 .bg-purple {
@@ -59,12 +72,49 @@ body {
   font-weight: 600;
   line-height: 16px;
 }
-.headerWrapper .header .part2 .countryDropdown span.ml-auto svg{
+.headerWrapper .header .part2 .countryDropdown span.ml-auto svg {
   opacity: 0.7;
+}
+/* HEADER LOCATION CHOSSE CSS */
+.locationModel .MuiPaper-elevation {
+  padding: 25px;
+  position: relative;
+}
+.locationModel .countryList {
+  margin-bottom: 0px;
+  padding-left: 0rem;
+  max-height: 400px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+.locationModel .countryList li{
+  width: 100%;
+  list-style: none;
+  
+}
+.locationModel .countryList li button{
+  width: 100%;
+  text-transform: capitalize !important;
+  color: #000 !important;
+  justify-content: flex-start !important;
+  padding: 10px 20px !important;
+}
+.locationModel .close_{
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: #000 !important;
+  min-width: 40px !important;
+  width: 40px !important;
+  height: 40px !important;
+  border-radius: 50% !important;
+}
+.locationModel .close_ svg {
+  font-size: 23px !important;
 }
 
 /* HEADER SEARCH CSS */
-header .headerSearch{
+.headerSearch {
   border-radius: 10px;
   border: 1px solid rgba(0, 0, 0, 0.1);
   width: 60%;
@@ -73,22 +123,22 @@ header .headerSearch{
   padding: 10px;
   position: relative;
 }
-header .headerSearch input::-webkit-input-placeholder{
+.headerSearch input::-webkit-input-placeholder {
   color: rgba(0, 0, 0, 0.6);
 }
-header .headerSearch input {
+.headerSearch input {
   background: transparent !important;
   outline: none !important;
-  font-size: 15px ;
+  font-size: 15px;
   color: #000;
   width: 100%;
   height: 30px;
   border: 0px !important;
   padding: 0px 20px !important;
-} 
-header .headerSearch button{
+}
+.headerSearch button {
   position: absolute;
-  top : 10px ;
+  top: 10px;
   right: 15px;
   z-index: 100;
   min-width: 30px !important;
@@ -97,10 +147,10 @@ header .headerSearch button{
   border-radius: 50% !important;
   color: black;
 }
-header .headerSearch button svg{
+.headerSearch button svg {
   font-size: 30px;
 }
-header .part3 .circle{
+.part3 .circle {
   align-items: center;
   justify-content: center;
   min-width: 50px !important;
@@ -110,31 +160,39 @@ header .part3 .circle{
   bottom: 1px solid rgba(0, 0, 0, 0.1);
   color: black;
 }
-header .part3 .circle svg{
+.part3 .circle svg {
   font-size: 30px;
 }
 
 /* CART TAB CSS */
-.cartTab .price{
+.cartTab .price {
   font-size: 18px;
   color: rgba(0, 0, 0, 0.8);
   font-weight: 600;
 }
-.cartTab button{
+.cartTab button {
   background-color: #fff1ee !important;
 }
-.cartTab button svg{
+.cartTab button svg {
   color: #ff6b6b;
 }
-.cartTab .cartCount{
-  position : absolute;
-  top :0px;
+.cartTab .cartCount {
+  position: absolute;
+  top: 0px;
   right: -5px;
   background-color: #ff6b6b;
   border-radius: 50%;
   color: #fff;
   width: 20px;
   height: 20px;
+}
+nav .navPart1 {
+  max-width: 20%;
+  flex: 0 0 20%;
+}
+nav .navPart2 {
+  max-width: 80%;
+  flex: 0 0 80%;
 }
 
 /* CART DROPDOWN CSS */
@@ -143,41 +201,44 @@ nav .allCartTab {
   padding: 10px 15px !important;
   border-radius: 30px;
 }
-nav .allCartTab *{
-  color : #fff ;
+nav .allCartTab * {
+  color: #fff;
 }
-nav .allCartTab :hover{
+nav .allCartTab :hover {
   background-color: #2bbef9;
 }
 nav .allCartTab .text {
   font-weight: 600;
 }
-nav .allCartTab svg{
+nav .allCartTab svg {
   font-size: 20px !important;
 }
-nav .allCartTab .icon1 svg{
+nav .allCartTab .icon1 svg {
   font-size: 25px !important;
 }
-nav .allCartTab .icon2 svg{
+nav .allCartTab .icon2 svg {
   font-size: 20px !important;
 }
 
-nav .navPart2 ul{
+nav .navPart2 ul {
   margin-bottom: 0px;
 }
-nav .navPart2 ul li a{
-  font-size: 16px;
+nav .navPart2 ul li a {
+  font-size: 14px;
   font-weight: 500;
   text-decoration: none;
   color: rgba(0, 0, 0, 0.7);
   text-transform: uppercase;
   display: flex;
   align-items: center;
-  padding: 8px 20px;
+  padding: 10px 15px;
   transition: all 0.3s ease-in-out;
-  border-radius: 30px;
+  border-radius: 25px;
 }
-nav .navPart2 ul li a:hover{
+nav .navPart2 ul li a svg {
+  font-size: 17px;
+}
+nav .navPart2 ul li a:hover {
   background: #f0faff;
   color: #2bbef9;
 }

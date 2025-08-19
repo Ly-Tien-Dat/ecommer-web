@@ -2,13 +2,20 @@ import Button from "@mui/material/Button";
 import { IoMenu } from "react-icons/io5";
 import { FaAngleDown } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import { GoHome } from "react-icons/go";
+import { SiCakephp } from "react-icons/si";
+import { GiCakeSlice } from "react-icons/gi";
+import { TfiGallery } from "react-icons/tfi";
+import { CiIceCream } from "react-icons/ci";
+import { GrBlog } from "react-icons/gr";
+import { MdConnectWithoutContact } from "react-icons/md";
 
 const Navigation = () => {
   return (
     <nav className="">
       <div className="container">
         <div className="row">
-          <div className="col-sm-3 navPart1">
+          <div className="col-sm-2 navPart1">
             <Button className="allCartTab align-items-center">
               <span className="icon1 me-2">
                 <IoMenu />
@@ -19,28 +26,28 @@ const Navigation = () => {
               </span>
             </Button>
           </div>
-          <div className="col-sm-9 navPart2 d-flex align-items-center ">
+          <div className="col-sm-10 navPart2 d-flex align-items-center ">
             <ul className="list list-inline w-100">
-              <li className="list-inline-item ">
-                <Link to="/">Home</Link>
+              <li className="list-inline-item ms-auto">
+                <Link to="/"> <GoHome/> &nbsp; Home</Link>
               </li>
               <li className="list-inline-item">
-                <Link to="/">Son</Link>
+                <Link to="/"> <SiCakephp/> &nbsp; Baked Goods</Link>
               </li>
               <li className="list-inline-item">
-                <Link to="/">Go</Link>
+                <Link to="/"> <GiCakeSlice/> &nbsp; Seasonal treats</Link>
               </li>
               <li className="list-inline-item">
-                <Link to="/">Han</Link>
+                <Link to="/"> <TfiGallery/> &nbsp; Cakes gallery</Link>
               </li>
               <li className="list-inline-item">
-                <Link to="/">Hell</Link>
+                <Link to="/"> <CiIceCream/> &nbsp; ice sceam</Link>
               </li>
               <li className="list-inline-item">
-                <Link to="/">Blog</Link>
+                <Link to="/"> <GrBlog/> &nbsp; Blog</Link>
               </li>
               <li className="list-inline-item">
-                <Link to="/">Contact</Link>
+                <Link to="/"> <MdConnectWithoutContact/> &nbsp; Contact</Link>
               </li>
             </ul>
           </div>
