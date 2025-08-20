@@ -30,6 +30,10 @@ body {
   background-color: #6f42c1;
 }
 /* HEADER CSS */
+.headerWrapper{
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding-bottom: 10px;
+}
 .headerWrapper .top-strip {
   padding: 8px 0px;
 }
@@ -99,6 +103,13 @@ body {
   justify-content: flex-start !important;
   padding: 10px 20px !important;
 }
+.locationModel .countryList li button:hover {
+  background: #f1f1f1 !important;
+}
+.locationModel .countryList li button.active {
+  background: #cedade !important;
+}
+
 .locationModel .close_{
   position: absolute;
   top: 10px;
@@ -223,15 +234,18 @@ nav .allCartTab .icon2 svg {
 nav .navPart2 ul {
   margin-bottom: 0px;
 }
-nav .navPart2 ul li a {
-  font-size: 14px;
-  font-weight: 500;
+nav .navPart2 ul li a{
+  text-decoration: none;
+}
+nav .navPart2 ul li a button{
+  font-size: 16px !important;
+  font-weight: 600;
   text-decoration: none;
   color: rgba(0, 0, 0, 0.7);
   text-transform: uppercase;
   display: flex;
   align-items: center;
-  padding: 10px 15px;
+  padding: 13px 20px;
   transition: all 0.3s ease-in-out;
   border-radius: 25px;
 }

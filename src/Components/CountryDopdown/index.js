@@ -3,15 +3,38 @@ import Button from "@mui/material/Button";
 import Dialog from "@mui/material/Dialog";
 import { IoSearchSharp } from "react-icons/io5";
 import { IoClose } from "react-icons/io5";
-import { useState } from "react";
 import Slide from "@mui/material/Slide";
-import React from "react";
+import React, { useState, useEffect, useContext } from "react";
+import { MyContext } from "../../App";
 
 const Transition = React.forwardRef(function Transition(props, ref) {
   return <Slide direction="up" ref={ref} {...props} />;
 });
 const CountryDropdown = () => {
   const [isOpenModel, setIsOpenModel] = useState(false);
+  const [selectedTab, setSelectedTab] = useState(null);
+  const [countryList, setCountryList] = useState([]);
+
+  const context = useContext(MyContext);
+
+  const selectCountry = (index) => {
+    setSelectedTab(index);
+    setIsOpenModel(false);
+  };
+  useEffect(() => {
+    setCountryList(context.countryList);
+  }, []);
+  const filterList = (e) => {
+    const keyword = e.target.value.toLowerCase();
+    if (keyword !== "") {
+      const list = countryList.filter((item) => {
+        return item.country.toLowerCase().includes(keyword);
+      });
+      setCountryList(list);
+    } else {
+      setCountryList(context.countryList);
+    }
+  };
 
   return (
     <>
@@ -39,85 +62,30 @@ const CountryDropdown = () => {
           <IoClose />
         </Button>
         <div className="headerSearch w-100">
-          <input type="text" placeholder="Search for locations ..." />
+          <input
+            type="text"
+            placeholder="Search for locations ..."
+            onChange={filterList}
+          />
           <Button>
             <IoSearchSharp />
           </Button>
         </div>
 
         <ul className="countryList mt-3">
-          <li>
-            <Button onClick={() => setIsOpenModel(false)}>Vietnam</Button>
-          </li>
-          <li>
-            <Button onClick={() => setIsOpenModel(false)}>China</Button>
-          </li>
-          <li>
-            <Button onClick={() => setIsOpenModel(false)}>United States</Button>
-          </li>
-          <li>
-            <Button onClick={() => setIsOpenModel(false)}>India</Button>
-          </li>
-          <li>
-            <Button onClick={() => setIsOpenModel(false)}>Japan</Button>
-          </li>
-          <li>
-            <Button onClick={() => setIsOpenModel(false)}>Taiwan</Button>
-          </li>
-          <li>
-            <Button onClick={() => setIsOpenModel(false)}>German</Button>
-          </li>
-          <li>
-            <Button onClick={() => setIsOpenModel(false)}>Russia</Button>
-          </li>
-          <li>
-            <Button onClick={() => setIsOpenModel(false)}>Vietnam</Button>
-          </li>
-          <li>
-            <Button onClick={() => setIsOpenModel(false)}>China</Button>
-          </li>
-          <li>
-            <Button onClick={() => setIsOpenModel(false)}>United States</Button>
-          </li>
-          <li>
-            <Button onClick={() => setIsOpenModel(false)}>India</Button>
-          </li>
-          <li>
-            <Button onClick={() => setIsOpenModel(false)}>Japan</Button>
-          </li>
-          <li>
-            <Button onClick={() => setIsOpenModel(false)}>Taiwan</Button>
-          </li>
-          <li>
-            <Button onClick={() => setIsOpenModel(false)}>German</Button>
-          </li>
-          <li>
-            <Button onClick={() => setIsOpenModel(false)}>Russia</Button>
-          </li>
-          <li>
-            <Button onClick={() => setIsOpenModel(false)}>Vietnam</Button>
-          </li>
-          <li>
-            <Button onClick={() => setIsOpenModel(false)}>China</Button>
-          </li>
-          <li>
-            <Button onClick={() => setIsOpenModel(false)}>United States</Button>
-          </li>
-          <li>
-            <Button onClick={() => setIsOpenModel(false)}>India</Button>
-          </li>
-          <li>
-            <Button onClick={() => setIsOpenModel(false)}>Japan</Button>
-          </li>
-          <li>
-            <Button onClick={() => setIsOpenModel(false)}>Taiwan</Button>
-          </li>
-          <li>
-            <Button onClick={() => setIsOpenModel(false)}>German</Button>
-          </li>
-          <li>
-            <Button onClick={() => setIsOpenModel(false)}>Russia</Button>
-          </li>
+          {countryList?.length !== 0 &&
+            countryList?.map((item, index) => {
+              return (
+                <li key={index}>
+                  <Button
+                    onClick={() => selectCountry(index)}
+                    className={`${selectedTab === index ? "active" : ""}`}
+                  >
+                    {item.country}
+                  </Button>
+                </li>
+              );
+            })}
         </ul>
       </Dialog>
     </>

@@ -2,13 +2,6 @@ import Button from "@mui/material/Button";
 import { IoMenu } from "react-icons/io5";
 import { FaAngleDown } from "react-icons/fa";
 import { Link } from "react-router-dom";
-import { GoHome } from "react-icons/go";
-import { SiCakephp } from "react-icons/si";
-import { GiCakeSlice } from "react-icons/gi";
-import { TfiGallery } from "react-icons/tfi";
-import { CiIceCream } from "react-icons/ci";
-import { GrBlog } from "react-icons/gr";
-import { MdConnectWithoutContact } from "react-icons/md";
 
 const Navigation = () => {
   return (
@@ -29,25 +22,46 @@ const Navigation = () => {
           <div className="col-sm-10 navPart2 d-flex align-items-center ">
             <ul className="list list-inline w-100">
               <li className="list-inline-item ms-auto">
-                <Link to="/"> <GoHome/> &nbsp; Home</Link>
+                <Link to="/">
+                  {" "}
+                  <Button> Home </Button>
+                </Link>
               </li>
               <li className="list-inline-item">
-                <Link to="/"> <SiCakephp/> &nbsp; Baked Goods</Link>
+                <Link to="/">
+                  {" "}
+                  <Button> Baked Goods </Button>
+                </Link>
               </li>
               <li className="list-inline-item">
-                <Link to="/"> <GiCakeSlice/> &nbsp; Seasonal treats</Link>
+                <Link to="/">
+                  {" "}
+                  <Button> Seasonal treats </Button>
+                </Link>
               </li>
               <li className="list-inline-item">
-                <Link to="/"> <TfiGallery/> &nbsp; Cakes gallery</Link>
+                <Link to="/">
+                  {" "}
+                  <Button> Cakes gallery </Button>
+                </Link>
               </li>
               <li className="list-inline-item">
-                <Link to="/"> <CiIceCream/> &nbsp; ice sceam</Link>
+                <Link to="/">
+                  {" "}
+                  <Button> ice sceam </Button>
+                </Link>
               </li>
               <li className="list-inline-item">
-                <Link to="/"> <GrBlog/> &nbsp; Blog</Link>
+                <Link to="/">
+                  {" "}
+                  <Button> Blog </Button>{" "}
+                </Link>
               </li>
               <li className="list-inline-item">
-                <Link to="/"> <MdConnectWithoutContact/> &nbsp; Contact</Link>
+                <Link to="/">
+                  {" "}
+                  <Button> Contact </Button>
+                </Link>
               </li>
             </ul>
           </div>
