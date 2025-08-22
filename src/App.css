@@ -14,7 +14,7 @@ body {
     max-width: 1200px;
   }
 }
-::-webkit-scrollbar{
+::-webkit-scrollbar {
   width: 8px !important;
   height: 8px !important;
 }
@@ -22,7 +22,7 @@ body {
   background: #ccc !important;
   border-radius: 10px !important;
 }
-::-webkit-scrollbar-track{
+::-webkit-scrollbar-track {
   background: transparent !important;
 }
 
@@ -30,7 +30,7 @@ body {
   background-color: #6f42c1;
 }
 /* HEADER CSS */
-.headerWrapper{
+.headerWrapper {
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   padding-bottom: 10px;
 }
@@ -91,12 +91,11 @@ body {
   overflow-y: scroll;
   overflow-x: hidden;
 }
-.locationModel .countryList li{
+.locationModel .countryList li {
   width: 100%;
   list-style: none;
-  
 }
-.locationModel .countryList li button{
+.locationModel .countryList li button {
   width: 100%;
   text-transform: capitalize !important;
   color: #000 !important;
@@ -110,7 +109,7 @@ body {
   background: #cedade !important;
 }
 
-.locationModel .close_{
+.locationModel .close_ {
   position: absolute;
   top: 10px;
   right: 10px;
@@ -205,6 +204,46 @@ nav .navPart2 {
   max-width: 80%;
   flex: 0 0 80%;
 }
+nav .navPart1 .catWrapper {
+  position: relative;
+  padding: 10px 15px;
+}
+nav .navPart1 .catWrapper .sidebarNav {
+  width: 100%;
+  height: auto;
+  background: #fff;
+  position: absolute;
+  top: 115%;
+  left: 0px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 15px 0px;
+  opacity: 0;
+  transition: all 0.36s ease-in-out;
+  visibility: hidden;
+}
+nav .navPart1 .catWrapper .sidebarNav .open{
+  opacity: 1;
+  visibility: inherit;
+  height: 100%;
+}
+nav .navPart1 .catWrapper .sidebarNav ul {
+  margin-bottom: 0px;
+  padding-left: 0px;
+  width: 100%;
+}
+nav .navPart1 .catWrapper .sidebarNav ul li {
+  width: 100%;
+  list-style-type: none;
+  padding: 0px 15px;
+}
+nav .navPart1 .catWrapper .sidebarNav ul li button {
+  color: #000 !important;
+  width: 100%;
+  justify-content: flex-start;
+}
+nav .navPart1 .catWrapper .sidebarNav ul li button:hover {
+  background: transparent !important;
+}
 
 /* CART DROPDOWN CSS */
 nav .allCartTab {
@@ -234,10 +273,13 @@ nav .allCartTab .icon2 svg {
 nav .navPart2 ul {
   margin-bottom: 0px;
 }
-nav .navPart2 ul li a{
+nav .navPart2 ul li {
+  padding-bottom: 15px;
+}
+nav .navPart2 ul li a {
   text-decoration: none;
 }
-nav .navPart2 ul li a button{
+nav .navPart2 ul li a button {
   font-size: 16px !important;
   font-weight: 600;
   text-decoration: none;
@@ -245,7 +287,7 @@ nav .navPart2 ul li a button{
   text-transform: uppercase;
   display: flex;
   align-items: center;
-  padding: 13px 20px;
+  padding: 10px 27px;
   transition: all 0.3s ease-in-out;
   border-radius: 25px;
 }
@@ -255,4 +297,38 @@ nav .navPart2 ul li a svg {
 nav .navPart2 ul li a:hover {
   background: #f0faff;
   color: #2bbef9;
+}
+nav .navPart2 ul li {
+  position: relative;
+}
+nav .navPart2 ul li .subMenu {
+  position: absolute;
+  top: 150%;
+  left: 0px;
+  min-width: 230px;
+  background: #fff;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.36s ease-in-out;
+}
+nav .navPart2 ul li .subMenu a {
+  display: block;
+  width: 100%;
+}
+nav .navPart2 ul li .subMenu a button {
+  width: 100%;
+  justify-content: flex-start !important;
+  border-radius: 0px !important;
+  text-transform: capitalize !important;
+  font-weight: 600 !important;
+}
+nav .navPart2 ul li .subMenu a button:hover {
+  background: #f0faff !important;
+  color: #2bbef9 !important;
+}
+
+nav .navPart2 ul li:hover .subMenu {
+  opacity: 1;
+  visibility: inherit;
+  top: 100%;
 }

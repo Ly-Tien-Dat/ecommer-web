@@ -11,6 +11,7 @@ import { useEffect } from "react";
 const MyContext = createContext();
 function App() {
   const [countryList,setCountryList] = useState([]);
+  const [selectedCountry,setselectedCountry] = useState('');
 
   useEffect(() => {
     getCountry("https://countriesnow.space/api/v0.1/countries");
@@ -23,7 +24,9 @@ function App() {
     })
   }
   const values = {
-    countryList
+    countryList,
+    setselectedCountry,
+    selectedCountry,
   };
   return (
     <BrowserRouter>
